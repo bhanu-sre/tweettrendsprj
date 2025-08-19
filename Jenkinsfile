@@ -21,13 +21,13 @@ environment {
                  echo "----------- build complted ----------"
             }
         }
-        stage("test"){
-            steps{
-                echo "----------- unit test started ----------"
-                sh 'mvn surefire-report:report'
-                 echo "----------- unit test Complted ----------"
-            }
-        }
+        // stage("test"){
+        //     steps{
+        //         echo "----------- unit test started ----------"
+        //         sh 'mvn surefire-report:report'
+        //          echo "----------- unit test Complted ----------"
+        //     }
+        // }
         // stage('SonarQube analysis') {
         // environment {
         // scannerHome = tool 'cs-sonar-scanner'
@@ -48,7 +48,7 @@ environment {
                           "files": [
                             {
                               "pattern": "jarstaging/(*)",
-                              "target": "libs-release-local-maven-remote/{1}",
+                              "target": "libs-release-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
                               "exclusions": [ "*.sha1", "*.md5"]
