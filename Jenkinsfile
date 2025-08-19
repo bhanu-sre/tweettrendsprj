@@ -5,7 +5,7 @@ pipeline {
         }
     }
 environment {
-    PATH = "/opt/apache-maven-3.9.11/bin:$PATH"
+    PATH = "/opt/maven/bin:$PATH"
 }    
     stages {
         stage('Git Checkout') {
